@@ -1,27 +1,24 @@
-# TheMovieDatabase
+# The Movie Database
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## Setup Project
 
-## Development server
+1. Clone repository melalui terminal `git clone https://github.com/bayufajariyanto/the-movie-database`
+2. Masuk ke dalam repository `cd the-movie-database`
+3. Install dependencies `npm install`
+4. Jalankan aplikasi `ng serve`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Task yang sudah dikerjakan
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Menampilkan informasi penting daftar film
+2. Menampilkan detail informasi dari film yang dipilih
+3. Menyimpan data film favorite di local storage
+4. Menampilkan data film yang telah disimpan
+5. Membuat pipe untuk formatting durasi film
+6. Membuat reusable component
+7. Membuat struktur project yang rapi
+   - pages -> Menyimpan semua halaman dan routing
+   - services -> Menyimpan semua service api
+   - core -> Menyimpan reusable function atau variable untuk semua component seperti pipe, variable constant, dll
+   - shared -> Menyimpan reusable component
+8. Tampilan responsive
+9. Semantic git message
