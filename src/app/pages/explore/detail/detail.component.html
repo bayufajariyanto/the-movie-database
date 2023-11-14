@@ -1,1 +1,47 @@
-<p>detail works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <img [src]="model?.poster_path" class="img-fluid w-100 object-fit-cover rounded-5" alt="Poster Image">
+        </div>
+        <div class="col-12 col-lg-6 py-4">
+            <h5 class="display-6">
+                <span class="fw-bold">
+                    {{ model?.original_title }}
+                </span>
+            </h5>
+            <div class="row">
+                <div class="col-12">
+                    <div class="pb-3">
+                        <small class="fw-light">
+                            {{ model?.release_date | date:'YYYY' }}
+                        </small>
+                        •
+                        <small class="fw-light">
+                            {{ model?.genre }}
+                        </small>
+                        •
+                        <small class="fw-light">
+                            {{ model?.runtime | duration }}
+                        </small>
+                        <small class="fw-light ms-2 d-none d-lg-inline-block" role="button" (click)="save()">
+                            <i class="fa-bookmark" [ngClass]="isSave ? 'fa-solid' : 'fa-regular'"></i>
+                        </small>
+                    </div>
+                    <h6 class="lead mt-3">Overview</h6>
+                    <small>
+                        {{ model?.overview }}
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar fixed-bottom bg-body-tertiary d-block d-lg-none" role="button" (click)="save()">
+    <div class="container-fluid d-flex justify-content-center py-3">
+        <small class="fw-light ms-2">
+            <i class="fa-bookmark me-2" [ngClass]="isSave ? 'fa-solid' : 'fa-regular'"></i>
+            {{ label }}
+        </small>
+    </div>
+</nav>

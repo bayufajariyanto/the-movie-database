@@ -11,7 +11,6 @@ describe('HomeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HomeComponent],
-      // imports: [HttpClient],
       providers: [HttpClient, HttpHandler],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
@@ -27,6 +26,4 @@ describe('HomeComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  // providers: [HttpClientID],
 });

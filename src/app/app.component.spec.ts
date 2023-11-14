@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  // it(`should have as title 'The Movie Database - TMDb'`, () => {
-  //   const fixture = TestBed.createComponent(HomeComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('The Movie Database - TMDb');
-  // });
-
 });

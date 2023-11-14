@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TMDB_IMG_URL } from 'src/app/core/tmdb.constants';
+import { TMDB_IMG_SMALL } from 'src/app/core/constants/tmdb.constant';
 import { HomeService } from 'src/app/services/home/home.service';
 
 @Component({
@@ -9,17 +9,15 @@ import { HomeService } from 'src/app/services/home/home.service';
 })
 export class HomeComponent implements OnInit {
 
-  imageUrl = TMDB_IMG_URL
+  imageUrl = TMDB_IMG_SMALL
 
   listData: Array<any> = []
 
-  obser: any;
-
   constructor(
-    private homeService: HomeService
+    private homeService: HomeService,
   ) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.getData()
   }
 
@@ -29,12 +27,10 @@ export class HomeComponent implements OnInit {
 
       this.listData = Array.isArray(mapData?.results) ? mapData?.results.map((item: any) => {
         let temp = item
-        temp.backdrop_path = this.imageUrl + item.backdrop_path
+        temp.poster_path = this.imageUrl + item.poster_path
         return temp
       }) : []
 
-      console.log(this.listData)
-      // this.setupIntersectionObserver()
     } catch (error) {
       console.error('Error fetching data:', error);
     }

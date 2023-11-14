@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import * as TmdbConstants from 'src/app/core/tmdb.constants';
+import * as TmdbConstants from 'src/app/core/constants/tmdb.constant';
 
 @Injectable({
   providedIn: 'root'

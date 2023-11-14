@@ -1,18 +1,13 @@
-<div class="container">
-    <div class="fs-3">Upcoming</div>
-    <div class="row flex-nowrap overflow-auto mt-3">
-        <div class="card p-0 border border-0 me-3" style="width: 18rem;" *ngFor="let val of listData">
-            <img [src]="val?.backdrop_path" class="card-img-top h-100" alt="Gambar Backdrop" loading="lazy">
-            <div class="card-body">
-                <h5 class="card-title">{{ val?.title }}</h5>
-                <small class="card-text">
-                    <span>
-                        {{ val?.release_date | date:'y' }} | <i class="fa-solid fa-star mx-1 text-warning"></i> {{
-                        val?.vote_average | number:'1.1-1'}}
-                    </span>
-                    <span *ngIf="val?.adult"> | 18+</span>
-                </small>
-            </div>
+<div class="container py-5">
+    <h3 class="display-3">Movies</h3>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p class="lead text-body-secondary">
+                Movies move us like nothing else can, whether they’re scary, funny, dramatic, romantic or anywhere
+                in-between.
+                So many titles, so much to experience.
+            </p>
         </div>
     </div>
+    <app-list-card [listData]="listData" [title]="'Upcoming'"></app-list-card>
 </div>

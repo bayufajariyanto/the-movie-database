@@ -1,0 +1,13 @@
+/* Container holding the image and the text */
+.container-img {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    background-color: #FFF !important;
+}

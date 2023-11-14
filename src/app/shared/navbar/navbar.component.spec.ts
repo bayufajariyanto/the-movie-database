@@ -21,10 +21,6 @@ describe('NavbarComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
-
   it('should create the app', () => {
     const fixture = TestBed.createComponent(NavbarComponent);
     const app = fixture.componentInstance;
